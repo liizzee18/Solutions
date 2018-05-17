@@ -1,0 +1,25 @@
+//Given two strings, write a method to decide if one is a permutation of the other.
+
+public static boolean isAPermutation(String s1, String s2){
+
+   if(s1.length!=s2.length){
+      return false; 
+      
+   HashMap <Character, Integer> hm = new HashMap <Chararcter, Integer>(); 
+       
+       for(int i = 0;i<s1.length,i++){
+         int c1 = hm.getOrDefault(s1.charAt(i),0);
+         int c2 = hm.getOrDefault(s2.charAt(i,0);
+         hm.put(s1.charAt(i),c1+1);
+         hm.put(s2.charAt(i),c2-1);
+       }
+       for(Character c : hm.keySet()){
+        if(hm.get(c)!= 0)
+          return false;
+       }
+        
+  }
+
+
+
+
