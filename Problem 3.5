@@ -1,18 +1,14 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+smallOnTop(Stack<Integer> s) {
+		Stack<Integer> s2= new Stack<Integer>();
+		
+		int t=s.pop();
+		
+		while(!s2.isEmpty() && s2.peek() > t) {
+			s.push(s2.pop());
+		}
+		s2.push(t);
+	}
 
 
 
