@@ -15,18 +15,48 @@ public static void min(Stack<Integer> s) {
 
 
 
-
-I -Design a stack which, in addition to push and pop, has a function min which returns the minimum element.
-   Push, pop and min should all operate in 0(1) time.
-
-D -
-
-E -
-
-A -
-
-L -
+I - Design a stack which, in addition to push and pop, has a function min which returns the minimum element.
+    Push, pop and min should all operate in 0(1) time.
 
 
+D - Find and return the smallest value in the   stack.
+
+E&A:
+
+(1)
+
+With the stack containing the values of 6,3,8,5,9 it returns 3
+
+(2)
+
+Iterate stack by popping and checking every element with the previous smallest element. 
+When the values is found return min variable.
+
+ (3)
+
+The use of a temp stack 
+
+(4)
+
+[6,3,8,5,9]
+min=3
+returns 3
 
 
+(5)
+
+Implementation in the code. 
+
+(6) 
+
+[6,3,8,5,9]
+[5,5,5,5,5]
+[0,0,0,0,0]
+
+(7)
+
+Allow the stack to obtain its previous values 
+
+
+L-  Works for all cases with added exceptions. This problem is like the rest of the problems of finding the minimum value,
+    implemented differently based on the data structure. 
