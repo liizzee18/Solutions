@@ -12,19 +12,36 @@ smallOnTop(Stack<Integer> s) {
 
 
 
+D:  Sort stack from smallest to largest value
 
-I - Sort a stack such that the smallest items are on the top. Can use an additional temporary stack,
-    but you may not copy the elements into any other data structure.
+E&A(Duke's 7 Steps):
 
-D - 
+(1)
+When the given array is given without being sorted the array should be in ascending order after the function.
 
+(2)
 
-E -
+The way I thought of it was with the use of one stack, but later on I saw that a simpler solution 
+was available with the use of one less stack. 
 
+(3)
 
-A -
+Uses an extra stack to move items into place.
+only while loops used.
 
+(4)
 
-L -
+[5,7,2,8,4,9,1] original stack
+[9,8,7,5,4,2,1] temp stack
+[1,2,4,5,7,8,9] original stack
 
+(5)Code implemented above
 
+(6)
+[5,7,2,8,4,9,1]
+[4,2,5,0,0,3,8]
+[0,0,0,0,0,0]
+
+(7) Possible with only one extra stack.
+
+L - Works for all cases. 
