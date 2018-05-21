@@ -17,10 +17,36 @@ I - Determine if a string has all unique characters.
 
 D - Returns true if the characters in a string are unique, false otherwise.
 
-E - When the string is recieved, a hashset is created to store the characters of the string. 
+E&A (Duke's 7 Steps): 
+
+
+(1) abcd" -> true
+   "abbd" -> false
+
+(2) When the string is recieved, a hashset is created to store the characters of the string. 
     The string is then iterated and checked if its contais any of the characters that have been seen before in the hashset.
 
-A - Some anticipated outcomes might be that the given string only has 1 character.
+(3) For and an if statement was used to store the needed values
+
+(4)   "abc"
+     a=b false
+     a=c false
+     b=c false
+     return true
+
+(5)Implementation of the code above.
+
+(6)   "abcd"
+      "abbc"
+      "ajg9"
+      "3bbc"
+      "a"
+      "0"
+      " "
+
+(7)There is a need to have exceptions when working with empty string and non a-z variables.
+   Strings that are large in legth need to be handled in the exceptions also.
+
 
 L - The algorithm worked and this is a basic problem to be solved so there might be similar 
     problems that require to iterate through a string and check for a specific given character.
