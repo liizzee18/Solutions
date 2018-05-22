@@ -1,51 +1,59 @@
 
-boolean operation(String s1, String s2){
+int operation(String s1, String s2){
 
-
-   String [] wc = s1.split(" ");
-   String [] wc2 = s2.split(" ");
    
-      if(){
-      
-      
+      int edit = wc.length%wc2.length;
+   
+      if(s1.length != s2.length){
+         if (edit == 0){
+                return 0; 
+         }
+         else if(edit == 1){
+               return 1; 
+               
+         }
+         else{
+            return -1;          
+         }
+        
+        
       }
         
-    
+  }
     
   
-
 I - Insert a character, remove a character, or replace a character. 
     Given two strings, write a function to check if they are one edit (or zero edits) away.
 
-D - Returns a boolean wether the input has been changed by one character or none.
+D - Returns a integer to determine wheter the input has been changed by one character or none.
 
 E& A (Duke's 7 Steps): 
 
-(1)  pale, pIe -> true 
-     pales, pale -> true 
-     pale, bale -> true 
-     pale, bake -> false
+(1)  pale, pIe ->    4%3 = 3 -->-1     not one or zero edits away 
+     pales, pale ->  5%4 = 2 --> -1    not one or zero edits away 
+     pale, bale ->   4%4 = 0 --> 0     zero edits away 
+ 
 
 
-(2)
+(2) By just determining the size of the string and their divisibility we can determine the edits. 
 
-(3)
+(3) if statements to determine the possible cases. 
 
 (4)
+     pale, pIe ->    4%3 = 3 -->-1     not one or zero edits away 
+     pales, pale ->  5%4 = 2 --> -1    not one or zero edits away 
+     pale, bale ->   4%4 = 0 --> 0     zero edits away 
 
 
+(5) Code implementation shown above.
 
-(5)
+(6)"bananas" , "ban" --> 7%3 = 1 --> one edit away?? 
+    " "  , "  "     --> 0%0  = 0 --> zero edits away 
 
-
-(6)
-
-(7)
-
+(7)Worked on few of the cases. There is the need of developing a better algorithm to justify how many edits are away. 
 
 
-
-L -
+L - Some of the cases worked but there is logic errors.
 
 
 
