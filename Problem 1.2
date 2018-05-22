@@ -1,13 +1,12 @@
 
-public static void main(String[] args) {
 
-		String s1="odc";
-		String s2="dco";
+	
+boolean isAPermutation(String s1 ,String s2){	
 		
-		char[] a= new char[s1.length()];
-		char[] b= new char[s2.length()];
+	char[] a= new char[s1.length()];
+	char[] b= new char[s2.length()];
 		
-	for(int i=0; i<s1.length(); i++) {
+		for(int i=0; i<s1.length(); i++) {
 			a[i]=s1.charAt(i);
 		}
 		
@@ -31,16 +30,40 @@ public static void main(String[] args) {
 }
 
 
-
 I - Given two strings, write a method to decide if one is a permutation of the other.
 
-D -
+D -Find if all the characters in one string are contained in the other given string.
 
-E -
+E&A(Duke's 7 Steps):
 
-A -
+(1)
+     s1= "cat" s2= "tac" --> True
+     s1= "caat" s2="tacc" --> False  
 
-L -
+(2) To begin with there is a need to check length of the two given strings, if they are not equal, return false. 
+    Based on this case we will know automatically the strings can't be the same. Then you sort strings in 
+    alphabetical order. 
+
+(3)There are multiple for loops in order to store data in the char array. if loops to test conditions. 
+
+(4) user input: cat == atc 
+    same length ---> one less step to determine if the strings are a permutation.
+    cat --> length = 3 
+    atc --> length = 3 
+    //Does that make them a permutation 
+    Arrays.equal (a,b) will determine if they are a permutation
+
+(5) Code is implemented above 
+
+(6)   isAPermutation("" ,"") 
+      isAPermutation("dogs" ,"sgod") 
+      isAPermutation("cat " ," ") 
+      isAPermutation("a" ,"b") 
+      
+(7)Comparing the characters arrays using Array.equals() gave the desirable output.
+
+
+L - With the checking cases this code should work.
 
 
 
