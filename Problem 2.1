@@ -1,6 +1,6 @@
 
 
-public static void p21(Node curr) {
+	 void removeDuplicate(Node curr) {
 		HashSet<Integer> existingNum = new HashSet<Integer>();
 		Node prev = null;
 		
@@ -15,15 +15,42 @@ public static void p21(Node curr) {
 		}
 
 
-
-
 I -  Remove duplicates from an unsorted linked list.
 
-D -
-
-E -
-
-A -
+D - Output just removes duplicates from a linked list, modifying the existing linked list.
 
 
-L -
+E & A (Duke's 7 Steps): 
+
+  
+  (1) Original --> 3-4-6-3-7-9
+      Duplicate Removed --> 3-4-6-7-9
+  
+  
+  (2)Traverse through the hashset and compare if the value at that node has been seen, we do this by comparing the current 
+     value to the node that is moving along. Changing the pointers of the current's previous to point to the current's next. 
+     The current value that was "seen before" will loose the pointers. If the value has not been seen then it will be added. 
+     This is done by adding the node and making the current node point to previous. 
+  
+  
+  (3) Changing the pointers of the seen node to be the current's previous and also the added node pointer changes of the current 
+      node being the previous. 
+  
+  (4)   3-4-6-3-7-9
+       
+       [ 3 is the repeating value ]
+        new list: 3-4-6-7-9
+  
+  
+  (5) Code is implemented above. 
+  
+  
+  (6)    3-4-6-3-7-9
+  	 9-9-9-9-9-9
+	 3-4-6-2-7-9
+	
+  
+  (7)Using a hashset is the best way to find repeating values. 
+
+
+L - This implemention works for the tested cases.
