@@ -24,16 +24,37 @@ public static boolean isAPermutation(String s1, String s2){
 I - Given two strings, write a method to decide if one is a permutation of the other.
 
 
-D -
+D - The goal of this method is to determine if the two strings are permutation of one another 
 
 
-E -
+E & A (Duke's 7 Steps)
+
+(1)
+  __
+ |   | 0       if bunch of zeros are in the array that signifies that the two strings have the same characters 
+c| 1 | 0         
+i|-1 | 0
+ |   | 0
+  __
+
+(2)  The strings are the iterating with two counters created that returns the value to 
+     which the specified key is mapped,as the values are being put into the hashmap one of the counters
+     is added by 1 and the other one subtracted by 1. The goal is to have the characters of the string all equal to zero.
+     
+(3) initializing the counters and putting the values into the hashmap
+
+(4) Hard to show by hand..
+
+(5) The implementation of the code is demonstrated above. 
+
+(6) "cinema", "iceman" --> True 
+     "lock", look" --> False 
+ 
+(7) I tried to see if the instead of puting the string into the hashmap I could do the on spot comparing by using a much simpler
+    database. That wasn't efficient.
 
 
-A -
-
-
-L -
+L -  Worked for the few provided cases. 
 
 
 
