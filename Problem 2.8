@@ -1,0 +1,64 @@
+
+Node beginningOfLoop(Node h){
+
+while(back != null && back.next != null) {
+			front = front.next;
+			back = back.next.next;
+			if(front==back) {
+				break;
+			}
+		}
+		if(back==null || back.next==null) {
+			return null;
+		}
+		
+		back=head;
+		
+		while(front != back) {
+			front = front.next;
+			back = back.next;
+		}
+		return back;
+
+}
+
+
+
+I - Create a method that will find the node at the beggining of the loop in a circular linked list.
+
+D -  Find the loop and figure out which node is at the beginning returning the node.
+
+E & A (Duke's 7 Steps): 
+
+(1) A-B-C-D-E-C
+    returns C
+
+(2) Traverse list with two temporary node pointers, one going twice as fast as the other, 
+    when and if they meet signals that ther is a cycle.
+
+(3) Repetiton of while loops 
+
+(4)
+    A-B-C-D-E-C
+    front= C
+    back= C
+    return= C
+
+(5)Code implemented above. 
+
+(6)
+      A-B-C-D-E-C
+      B-B-B-B-B
+      C-C-C-C-C
+      B-F-B-F-B-C-D-C-D
+      A-B-B-C-A
+      
+
+L- Worked for some of the tested cases
+
+
+
+
+
+
+
