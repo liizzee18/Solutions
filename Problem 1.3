@@ -1,6 +1,6 @@
 
 public static void replace(String x) {
-	System.out.println("original: " + x);
+	
 		String r="%20";
 		String rS=x.replaceAll(" ", r);
 		System.out.println("new: " + rS);
@@ -9,14 +9,35 @@ public static void replace(String x) {
 I - Replace all spaces in a string with '%20: You may assume that the string has sufficient space at the end to hold 
     the additional characters, and that you are given the "true" length of the string.
 
-D -
-
-E -
+D - Find spaces in a string and replace every single one with the %20.
 
 
-A - 
+E & A (Duke's 7 Steps):
 
-L -
+(1)	Input: "Mr John Smith " J 13" 
+	Start traveresing array -->  Mr space (place%20) John (place%20) Smith ... etc.
+	Output: "Mr%20John%20Smith"
+	
+(2) With the given string an additional string with "%20" is created then using the method replaceAll can substitude 
+    the spaces with the new created string with "%20".
+
+(4)   "My name is Elizabeth"
+      r="%20"
+      new string= "My%20name%20is%20Elizabeth"
+
+(5) Implementation of the code is above 
+
+
+(6) "Mr John Smith " J 13"
+    "go"
+    "My name is Elizabeth "
+    " "
+    "Kiwii"
+
+(7) By using the method of replace all it avoided the use of using for loops to iterate through the string and replace 
+
+
+L - With the correct exceptions the cases will work. 
 
 
 
