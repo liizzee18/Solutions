@@ -1,15 +1,12 @@
 
 
+void deleteMiddle(Node current){
 
-
-
-
-
-
-
-
-
-
+     while(current!= null){
+       Node temp = current.next;  
+       current.data = temp.data;
+       curent.next = temp.next;
+        delete temp; 
 
 
 
@@ -17,13 +14,46 @@
 I - Implement an algorithm to delete a node in the middle (i.e., any node but the first and last node, 
      not necessarily the exact middle) of a singly linked list, given only access to that node.
 
-D -
+D - There is no need to return anything just need to remove a middle node in the linked list. 
 
-E -
+E & A (Duke's 7 Steps): 
 
-A -
+(1) With the given integer current pointer that is a node in the middle. Copying the next node data into the next node 
+    of the one we will remove. The pointers will be removed in such a way that the current node will be pointing to the 
+    temp next. 
 
-L -
+
+(2)  3-4-6-7-2-3         m = middle  t = temp
+       m t
+          -Node 6 is stored 
+          -Copy Data from 6 to 4 
+          -update link of the next node (current node next link to the temp next link)
+          -the temp pointer is now removed, deleting it from the linked list.
+          
+    3-4-7-2-3      
+    
+          
+(3) The assigning of new pointers to differnet nodes are the only pattern in this algorithm.
+
+
+(4) Input:  3-4-6-7-2-3
+    k= 4
+    Output: 3-4-7-2-3  
+
+
+(5) The code is implemented above.
+
+
+(6) 3-4-6-7-2-3  k= 4
+    3-4-7-2-3 
+
+    4-4-4-5  k= 4
+    
+    
+(7)It's important to keep track of the pointers and now to which nodes they are pointing. 
+
+
+L -code works for the tested case, gave a weird outcome for the other case. 
 
 
 
